@@ -25,9 +25,10 @@ class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
 
-
+#filters
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     filterset_fields = ['category', 'price']
     ordering_fields = ['price', 'stock']
     search_fields = ['name', 'description']
 
+#filters
