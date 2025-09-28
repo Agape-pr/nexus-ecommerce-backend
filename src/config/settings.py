@@ -163,10 +163,12 @@ REST_FRAMEWORK = {
 }
 #pagination
 
-
+#swagger documentation
 SPECTACULAR_SETTINGS = {
     "TITLE": "Nexus Ecommerce API",
     "DESCRIPTION": "API documentation for the Nexus Ecommerce backend",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
 }
+
+#swagger documentation
