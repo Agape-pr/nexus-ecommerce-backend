@@ -7,11 +7,12 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-    
+    #indexing
     class Meta:
         indexes = [
             models.Index(fields=["name"]),
         ]
+        #indexing
 
 class Product(models.Model):
     name = models.CharField(max_length=100, unique=True)
@@ -27,12 +28,13 @@ class Product(models.Model):
     blank=True,
     related_name="products"
 )
+    #indexing
     class Meta:
         indexes = [
             models.Index(fields=["name"]),
             models.Index(fields=["price"]),
         ]
-
+#indexing
 # Create your models here.
     def __str__(self):
         return self.name
