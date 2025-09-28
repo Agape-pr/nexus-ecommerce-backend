@@ -149,10 +149,15 @@ REST_FRAMEWORK = {
 AUTH_USER_MODEL = "accounts.User"
 
 REST_FRAMEWORK = {
+    "EXCEPTION_HANDLER": "config.utils.custom_exception_handler",
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     )
 }
+
+# src/config/settings.py
+
+
 
 
 #pagination

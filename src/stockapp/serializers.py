@@ -22,3 +22,9 @@ class ProductSerializer(serializers.ModelSerializer):
             'category',       # ✅ allow passing category id
             'category_name',  # ✅ read-only helper for display
         ]
+    def validate_price(self, value):
+        if value < 0:
+            raise serializers.ValidationError("Price cannot be negative.")
+        return value
+
+
