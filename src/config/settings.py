@@ -164,11 +164,43 @@ REST_FRAMEWORK = {
 #pagination
 
 #swagger documentation
+# SPECTACULAR_SETTINGS = {
+#     "TITLE": "Nexus Ecommerce API",
+#     "DESCRIPTION": "API documentation for the Nexus Ecommerce backend",
+#     "VERSION": "1.0.0",
+#     "SERVE_INCLUDE_SCHEMA": False,
+# }
+
+
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Nexus Ecommerce API",
-    "DESCRIPTION": "API documentation for the Nexus Ecommerce backend",
-    "VERSION": "1.0.0",
-    "SERVE_INCLUDE_SCHEMA": False,
+    'TITLE': 'Nexus E-commerce API',
+    'DESCRIPTION': """
+Welcome to the **Nexus E-commerce API** documentation!
+
+Here’s how you can use it:
+
+### 🔑 Authentication
+- Obtain a JWT token at `/api/auth/token/` using your username & password.
+- Use the token in the `Authorization` header like:
+Authorization: Bearer <your_token>
+
+markdown
+Copy code
+
+### 📦 Products & Categories
+- `/api/products/` → List, create, search, and filter products.
+- `/api/categories/` → Manage product categories.
+
+### 🛒 Cart & Orders
+- `/api/cart/` → View or update your cart.
+- `/api/orders/` → Create or view your orders.
+
+---
+
+ **Note:** Some endpoints require authentication.
+  """,
+  'VERSION': '1.0.0',
+  'SERVE_INCLUDE_SCHEMA': False,
 }
 
-#swagger documentation
+
